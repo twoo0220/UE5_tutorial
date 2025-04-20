@@ -82,3 +82,13 @@
   - ctrl + alt + f11
     - 에디터만 킨 상태에서 Visual code 수정했다면 라이브 빌드가 따로 가능함
     - 다만 무슨 일이 일어날지 모르기 때문에 가급적 껐다가 다시 키는걸 추천
+- C#의 리플렉션 문법 활용
+  - Metadata Specifier
+    - UCLASS(), UPROPERTY(), UFUNCTION() 등등
+  - 클래스에 UCLASS() 달아주고, 멤버변수에 UPROPERTY() 달어주어서 클래스와 멤버변수라고 언리얼엔진에게 인지시켜주어야 함
+  - 이 키워드에 붙어있는 애들만 언리얼에서 인지하고 관찰 대상이 된다고 보면 됨...어휴
+  - 언리얼 헤더 Tool이 이런 메타 데이터들 기반으로 동작
+  - 블루프린트에서 작업하고 싶다면 이걸 활용해볼걸
+    - 예를 들어, UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category=Stat)   
+    이 키워드를 멤버 변수 위에다가 붙이기 등등
+  - 
